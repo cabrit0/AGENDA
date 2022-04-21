@@ -19,8 +19,8 @@
             <td><%= contacto.sobrenome %></td>
             <td><%= contacto.telefone %></td>
             <td><%= contacto.email %></td>
-            <td><a href="/contacto/index/<%= contacto._id %>">Editar</a></td>
-            <td><a class="text-danger" href="/contacto/delete/<%= contacto._id %>">Excluir</a></td>
+            <td><a class="btn edit-btn" href="/contacto/index/<%= contacto._id %>">Editar</a></td>
+            <td><a class="btn del-btn" href="/contacto/delete/<%= contacto._id %>">Excluir</a></td>
           </tr>
           <% }); %>
         </table>
