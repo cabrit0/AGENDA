@@ -1,12 +1,15 @@
 {
-  "name": "aula17",
+  "name": "crud-agenda",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "14.x",
+    "npm": "6.14.14"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js --ignore public --ignore frontend",
-    "deploy": "gh-pages -d public",
+    "start": "nodemon server.js --ignore public --ignore frontend webpack -w",
     "dev": "webpack -w"
   },
   "keywords": [],
