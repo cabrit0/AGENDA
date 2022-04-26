@@ -45,7 +45,15 @@ Contacto.prototype.cleanUp = function () {
     }
   }
 
-  Contacto.prototype.edit = async function (id) {
+  this.body = {
+    nome: this.body.nome,
+    sobrenome: this.body.sobrenome,
+    email: this.body.email,
+    telefone: this.body.telefone,
+  };
+};
+
+Contacto.prototype.edit = async function (id) {
     if (typeof id !== "string") return;
     this.valida();
     if (this.errors.length > 0) return;
@@ -54,14 +62,6 @@ Contacto.prototype.cleanUp = function () {
       new: true,
     });
   };
-
-  this.body = {
-    nome: this.body.nome,
-    sobrenome: this.body.sobrenome,
-    email: this.body.email,
-    telefone: this.body.telefone,
-  };
-};
 
 // Métodos estáticos
 Contacto.buscaPorId = async function (id) {
